@@ -4,9 +4,9 @@ This is a step by step instruction on using Minikube on an Ubuntu host (on VMwar
 
 ## Creating the Custom Docker Image of Apache 2.4.49 (PicoCMS WIP)
 
-1) Create Dockerfile [Docker file here] (https://github.com/OoStellarnightoO/Kubenasty/blob/main/Apache/Dockerfile)
+1) Create Dockerfile [Docker file here](https://github.com/OoStellarnightoO/Kubenasty/blob/main/Apache/Dockerfile)
 
-2) In the same directory as the Dockerfile, create Custom Apache 2.4.49 config file with cgi-bin enabled for RCE testing purposes (Apache 2.4.49 is vulnerable to RCE if cgi-bin is enabled) [httpd.conf here] ()
+2) In the same directory as the Dockerfile, create Custom Apache 2.4.49 config file with cgi-bin enabled for RCE testing purposes (Apache 2.4.49 is vulnerable to RCE if cgi-bin is enabled) [httpd.conf here]()
 
 
 3) 

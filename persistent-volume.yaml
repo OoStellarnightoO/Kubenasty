@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolume  #leave this untouched
+metadata:
+  name: logs-pv #any name you want
+  labels:
+    type: local # not sure what this does
+spec:
+  capacity:
+    storage: 2Gi  # how much disk space you are allocating
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /data/logs  # this is the path on Minikube which will be mounted on the pod. by default, minikube persists any files on /data/*
+---
+apiVersion: v1
+kind: PersistentVolumeClaim # leave this untouched
+metadata:
+  name: logs-pvc # any name you want
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""  # by default if this is blank, minikube uses hostPath as the Storage Class. You may wish to look into localStorage
+  volumeName: logs-pv # this must reference the name from above
+  resources:
+    requests:
+      storage: 2Gi
